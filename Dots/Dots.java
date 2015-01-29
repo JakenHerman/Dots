@@ -77,7 +77,7 @@ public class Dots
                 break;
 
 			case 2:
-				for (col = 0; col < COLS-1; col++)
+				for (col = 0; col < COLS; col++)
 					for (row = 0; row < ROWS; row++)
 						board.bigDot(row, col);
 				break;
@@ -87,7 +87,7 @@ public class Dots
 					for(col=0; col <= row; col++)
                         board.bigDot(row+1, col);
                 break;
-				
+
 			case 4:
 				for (row = 0; row < ROWS; row++)
 					for (col=row; col < COLS; col++)
@@ -95,11 +95,12 @@ public class Dots
 				break;
 
 			case 5:
-				for ()
-					for()
-						board.bigDot();
+				for (row = 1; row < 8; row++)
+					for (col=0; col < (COLS-row); col++)
+						board.bigDot(row, col);
 				break;
-				
+
+
             default:
 					System.out.println("This one hasn't been done yet.");
 				break;
