@@ -106,6 +106,12 @@ public class Dots
 						board.bigDot(row, col);
 				break;
 
+			case 7:
+				for (row = 0; row < 9; row++)
+					for (col = row; col >= row; col--)
+						board.bigDot(row, col);
+				break;
+
             default:
 					System.out.println("This one hasn't been done yet.");
 				break;
