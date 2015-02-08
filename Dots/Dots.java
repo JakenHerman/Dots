@@ -111,6 +111,51 @@ public class Dots
 					for (col = row; col >= row; col--)
 						board.bigDot(row, col);
 				break;
+                
+            case 8:
+                for (row = 0; row < 9; row++)
+                    for (col = row; col >= row; col--)
+                        board.bigDot(row, col);
+                
+                for (col = 9; col > 0; col--)
+                    for (row = col; row <= col-9; row++)
+                        board.bigDot(col, row);
+                break;
+             //case 9
+                /*
+            case 10:
+                for (col = 0; col < 9; col++)
+                    while (col < 10)
+                        row = 0;
+                board.bigDot(col, row);
+                
+                for (row = 0; row < 9; row ++)
+                    while (row < 10)
+                        col = 9;
+                board.bigDot(col, row);
+                
+                for (col = 9; col > 0; col--)
+                    while (col > (col-10))
+                        row = 9;
+                board.bigDot(col, row);
+                
+                for (row = 9; row > 0; row--)
+                    while (row > (row-10))
+                        col = 0;
+                board.bigDot(col, row);
+                
+                break;
+                */
+            case 9:
+                row = 0;
+                    for (col = 0; col < 8; col++)
+                        board.bigDot(row, col);
+                col = 9;
+                    for (row = 0; row < 9; row++)
+                board.bigDot(col, row);
+                
+                
+                break;
 
             default:
 					System.out.println("This one hasn't been done yet.");
