@@ -70,100 +70,248 @@ public class Dots
         // draw your pattern
         // assume maximum number of dots in each row or col is 8
         switch (pattern) {
+
             case 1:
+
                 for (row = 0; row < ROWS; row++)
                     for (col = 0; col < COLS; col++)
                         board.bigDot(row, col);
                 break;
 
 			case 2:
+
 				for (col = 0; col < COLS; col++)
 					for (row = 0; row < ROWS; row++)
 						board.bigDot(row, col);
 				break;
 
 			case 3:
+
 				for (row=0; row < ROWS-1; row++)
 					for(col=0; col <= row; col++)
                         board.bigDot(row+1, col);
                 break;
 
 			case 4:
+
 				for (row = 0; row < ROWS; row++)
 					for (col=row; col < COLS; col++)
 						board.bigDot(row, col);
 				break;
 
 			case 5:
+
 				for (row = 1; row < 8; row++)
 					for (col=0; col < (COLS-row); col++)
 						board.bigDot(row, col);
 				break;
 
 			case 6:
+
 				for (row = 0; row < 8; row++)
 					for (col = 8; col >= (COLS-row); col--)
 						board.bigDot(row, col);
 				break;
 
 			case 7:
+
 				for (row = 0; row < 9; row++)
 					for (col = row; col >= row; col--)
 						board.bigDot(row, col);
 				break;
-                
-            case 8:
-                for (row = 0; row < 9; row++)
-                    for (col = row; col >= row; col--)
-                        board.bigDot(row, col);
-                
-                for (col = 9; col > 0; col--)
-                    for (row = col; row <= col-9; row++)
-                        board.bigDot(col, row);
-                break;
-             //case 9
-                /*
-            case 10:
-                for (col = 0; col < 9; col++)
-                    while (col < 10)
-                        row = 0;
-                board.bigDot(col, row);
-                
-                for (row = 0; row < 9; row ++)
-                    while (row < 10)
-                        col = 9;
-                board.bigDot(col, row);
-                
-                for (col = 9; col > 0; col--)
-                    while (col > (col-10))
-                        row = 9;
-                board.bigDot(col, row);
-                
-                for (row = 9; row > 0; row--)
-                    while (row > (row-10))
-                        col = 0;
-                board.bigDot(col, row);
-                
-                break;
-                */
-            case 9:
-                row = 0;
-                    for (col = 0; col < 8; col++)
-                        board.bigDot(row, col);
-                col = 9;
-                    for (row = 0; row < 9; row++)
-                board.bigDot(col, row);
-                
-                
-                break;
 
-            default:
-					System.out.println("This one hasn't been done yet.");
+			case 8:
+
+				for (row = 0; row < 9; row++)
+					for (col = row; col >= row; col--)
+						board.bigDot(row, col);
+
+				for (col = 8; col >= 0; col--)
+					for (row = (8-col); row <= (8-col); row++)
+						board.bigDot(row, col);
 				break;
-        }
-    }
+
+			case 9:
+
+				for (col = 0; col <= 3; col++)
+					for (row = col; row <= (7-col); row++)
+						board.bigDot(row, col);
+				break;
+
+			case 10:
+
+				for (col = 0; col <= 3; col++)
+					for (row = col; row <= (7-col); row++)
+						board.bigDot(row, col);
+
+				for (col = 4; col <= 7; col++)
+					for (row = (7-col); row <= col; row++)
+						board.bigDot(row, col);
+				break;
+
+			case 11:
+
+				row = 0;
+				for (col = 0; col <= 7; col++)
+					board.bigDot(row, col);
+
+				col = 7;
+				for (row = 0; row <= 7; row++)
+					board.bigDot(row, col);
+
+				row = 7;
+				for (col = row; col >= 0; col--)
+					board.bigDot(row, col);
+
+				col = 0;
+				for (row = 7; row >= (col+1); row--)
+					board.bigDot(row, col);
+
+				break;
+
+			case 12:
+
+				row = 0;
+				for (col = 0; col <= 7; col++)
+					board.bigDot(row, col);
+
+				col = 7;
+				for (row = 0; row <= 7; row++)
+					board.bigDot(row, col);
+
+				row = 7;
+				for (col = row; col >= 0; col--)
+					board.bigDot(row, col);
+
+				col = 0;
+				for (row = 7; row >= (col+1); row--)
+					board.bigDot(row, col);
+
+				row = 1;
+				for (col = 1; col <= 6; col++)
+					board.bigDot(row, col);
+
+				col = 6;
+				for (row = 1; row <= col; row++)
+					board.bigDot(row, col);
+
+				row = 6;
+				for (col = 5; col >= 1; col--)
+					board.bigDot(row, col);
+
+				col = 1;
+				for (row = 5; row >= 2; row--)
+					board.bigDot(row, col);
+
+				row = 2;
+				for (col = 2; col <=5; col++)
+					board.bigDot(row, col);
+
+				col = 5;
+				for (row = 2; row <=5; row++)
+					board.bigDot(row, col);
+
+				row = 5;
+				for (col = 5; col >= 2; col--)
+					board.bigDot(row, col);
+
+				col = 2;
+				for (row = 5; row >=3; row--)
+					board.bigDot(row, col);
+
+				row = 3;
+				for (col = 3; col <=4; col++)
+					board.bigDot(row, col);
+
+				col = 4;
+				for (row = 4; row <=4; row++)
+					board.bigDot(row, col);
+
+				row = 4;
+				col = 3;
+					board.bigDot(row, col);
+
+				break;
+
+			case 13:
+
+				row = 0;
+				for (col = 0; col <= 1; col++)
+					board.bigDot(row, col);
+
+				for (row = 1; row <= 6; row++)
+					for (col = (row - 1); col <= (row+1); col++)
+						board.bigDot(row, col);
+				row = 7;
+				for (col = 6; col <= row; col++)
+					board.bigDot(row, col);
+
+				break;
+
+			case 14:
+
+				for (row = 0; row < 8; row++)
+					for (col = row; col >= row; col--)
+						board.bigDot(row, col);
+
+				row = 7;
+				for (col = row; col >=6; col--)
+					board.bigDot(row, col);
+
+				for (row = 6; row >= 1; row--)
+					for (col=(row+1); col >= (row-1); col--)
+						board.bigDot(row, col);
+
+				row = 0;
+				col = 1;
+				board.bigDot(row, col);
+
+				break;
+
+			case 15:
+				for (row = 0; row < 8; row++)
+					for (col = row; col >= row; col--)
+						board.bigDot(row, col);
+				for (row = 0; row < 7; row++)
+					for (col = (row+1); col >= (row+1); col--)
+						board.bigDot(row, col);
+				break;
+
+			case 16:
+
+				for (row = 0; row < 8; row++)
+					for (col = row; col >= row; col--)
+						board.bigDot(row, col);
+				for (row = 0; row < 7; row++)
+					for (col = (row+1); col >= (row+1); col--)
+						board.bigDot(row, col);
+				for (row = 0; row < 6; row++)
+					for (col = (row+2); col >= (row+2); col--)
+						board.bigDot(row, col);
+				for (row = 0; row < 5; row++)
+					for (col = (row+3); col >= (row+3); col--)
+						board.bigDot(row, col);
+				for (row = 0; row < 4; row++)
+					for (col = (row+4); col >= (row+4); col--)
+						board.bigDot(row, col);
+				for (row = 0; row < 3; row++)
+					for (col = (row+5); col >= (row+5); col--)
+						board.bigDot(row, col);
+				for (row = 0; row < 2; row++)
+					for (col = (row+6); col >= (row+6); col--)
+						board.bigDot(row, col);
+				for (row = 0; row < 1; row++)
+					for (col = (row+7); col >= (row+7); col--)
+						board.bigDot(row, col);
+				break;
 
 
+        	default:
+				System.out.println("This one hasn't been done yet.");
+			break;
+
+}
+}
     /**  Metho to read in from user which pattern to do next.  If the
      *  user enters an integer between 1 and MAXPATTERN this value is
      *  returned; if the user enters q it returns -1; if the user
